@@ -62,7 +62,7 @@ This bot forwards photos and videos from a source Telegram group to one or more 
     Start the bot by running the main script:
 
     ```bash
-    python bot.py
+    python telegram-forwarding-bot.py
     ```
 
 ## Usage
