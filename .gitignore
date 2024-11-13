@@ -1,0 +1,7 @@
+# Ignore config file containing sensitive information
+config.py
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
