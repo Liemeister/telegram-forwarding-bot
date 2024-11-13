@@ -109,7 +109,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - **Dependencies**: Ensure that all required dependencies are listed in `requirements.txt`.
 - **Testing**: Test the bot thoroughly before deploying it to production, especially if modifying the code to handle additional message types or languages.
-
----
-
-This refined README provides both an overview and detailed setup instructions without redundancy. Now, the description field on GitHub remains concise, and the README file offers all the necessary details for users and contributors.
