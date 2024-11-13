@@ -1,4 +1,4 @@
-# config-example.py
+# config.py
 
 # Your Telegram API credentials
 api_id = 1234567  # Replace with your actual API_ID from my.telegram.org
