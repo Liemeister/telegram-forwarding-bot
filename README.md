@@ -111,7 +111,7 @@ You can easily deploy this bot on [Fly.io](https://fly.io/) to keep it running 2
 2. **Customize `fly.toml` with Your App Name**:
 
     - The repository includes a `fly.toml` file and a `Dockerfile` configured for Fly.io deployment.
-    - Open `fly.toml` and update `app = "XXX"` to match the app name you chose on Fly.io:
+    - Open `fly.toml` and update `app = "your-fly-app-name"` to match the app name you chose on Fly.io:
 
       ```toml
       app = "your-fly-app-name"  # Replace with your chosen Fly.io app name
