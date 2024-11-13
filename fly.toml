@@ -1,6 +1,6 @@
 # fly.toml app configuration file for telegram-forwarding-bot
 
-app = 'YOUR FLY.IO APP NAME HERE'
+app = 'your-fly-app-name'
 primary_region = 'cdg'
 
 [build]
