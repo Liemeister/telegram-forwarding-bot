@@ -1,0 +1,12 @@
+# fly.toml app configuration file for telegram-forwarding-bot
+
+app = 'YOUR FLY.IO APP NAME HERE'
+primary_region = 'cdg'
+
+[build]
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 1024
