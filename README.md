@@ -1,7 +1,3 @@
-Here’s your README with improved formatting and structure:
-
----
-
 # Telegram Forwarding Bot with Translation
 
 This bot forwards photos and videos from a source Telegram group to one or more target groups, translating captions into English (or another specified language) via Google Translate. Built with Python and Telethon, it supports media albums, handles rate limits, and excludes GIFs for efficient media sharing.
@@ -145,7 +141,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - **Dependencies**: Ensure that all required dependencies are listed in `requirements.txt`.
 - **Testing**: Test the bot thoroughly before deploying it to production, especially if modifying the code to handle additional message types or languages.
-
----
-
-This structure provides clear and professional documentation that’s easy to follow and covers all aspects of setup, configuration, and deployment. Let me know if you need any more tweaks!
