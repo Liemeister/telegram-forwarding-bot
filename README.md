@@ -46,9 +46,9 @@ This bot forwards photos and videos from a source Telegram group to one or more 
     bot_token = 'your_bot_token_here'  # Replace with your bot's token from BotFather on Telegram
 
     # Group IDs
-    source_group = -1001234567890  # Replace with the source group ID
-    target_group_1 = -1009876543210  # Replace with the first target group ID
-    target_group_2 = -1001122334455  # Replace with the second target group ID
+    source_group = -1000000000000  # Replace with the source group ID where messages will be monitored
+    target_group_1 = -1000000000001  # Replace with the first target group ID where messages will be forwarded
+    target_group_2 = -1000000000002  # Replace with the second target group ID where messages will be forwarded
 
     # Instructions:
     # 1. Obtain your API_ID and API_HASH by creating an app at https://my.telegram.org
