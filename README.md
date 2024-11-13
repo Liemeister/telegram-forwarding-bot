@@ -49,6 +49,12 @@ This bot forwards photos and videos from a source Telegram group to one or more 
     source_group = -1001234567890  # Replace with the source group ID
     target_group_1 = -1009876543210  # Replace with the first target group ID
     target_group_2 = -1001122334455  # Replace with the second target group ID
+
+    # Instructions:
+    1. Obtain your API_ID and API_HASH by creating an app at https://my.telegram.org
+    2. Create a bot and get the bot_token from BotFather on Telegram
+    3. Use @IDBot in Telegram to get the group IDs for source_group, target_group_1, and target_group_2
+    4. Fill in these values above to use the bot
     ```
 
 4. **Run the Bot**:
