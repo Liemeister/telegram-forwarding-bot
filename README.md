@@ -35,7 +35,7 @@ This bot forwards photos and videos from a source Telegram group to one or more 
 
 3. **Configure API Credentials and Group IDs**:
 
-    Create a `config.py` file in the root directory of the project, and add your Telegram API credentials and group IDs as follows:
+    The repository includes a config.py file in the root directory as a template for setting up your bot's credentials and group IDs. Simply open config.py and replace the placeholder values with your actual Telegram API credentials and group IDs as shown below:
 
     ```python
     # config.py
@@ -56,8 +56,9 @@ This bot forwards photos and videos from a source Telegram group to one or more 
     # 3. Use @IDBot in Telegram to get the group IDs for source_group, target_group_1, and target_group_2
     # 4. Fill in these values above to use the bot
     ```
-
-4. **Run the Bot**:
+    Security Note: After filling in config.py with your actual API credentials and group IDs, make sure to keep your repository private if you’re pushing it to GitHub or another remote host. This will help prevent accidental exposure of sensitive information like your API tokens and group IDs.
+   
+5. **Run the Bot**:
 
     Start the bot by running the main script:
 
