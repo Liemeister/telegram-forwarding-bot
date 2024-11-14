@@ -4,7 +4,7 @@ import asyncio
 from googletrans import Translator
 from collections import defaultdict
 from telethon.errors import FloodWaitError
-from telethon.tl.types import DocumentAttributeAnimated
+from telethon.tl.types import DocumentAttributeAnimated, DocumentAttributeSticker
 import config  # Import the config file
 
 # Enable logging
@@ -30,11 +30,23 @@ def is_gif(message):
             return True
     return False
 
+# Function to check if a message is a Sticker
+def is_sticker(message):
+    if message.sticker:
+        return True
+    if message.document:
+        if any(isinstance(attr, DocumentAttributeSticker) for attr in message.document.attributes):
+            return True
+    return False
+
 # Handler for albums (grouped media messages)
 @client.on(events.Album(chats=config.source_group))  # Use config.source_group
 async def album_handler(event):
-    # Filter only photo or video media items, excluding GIFs
-    media_messages = [msg for msg in event.messages if (msg.photo or msg.video) and not is_gif(msg)]
+    # Filter only photo or video media items, excluding GIFs and stickers
+    media_messages = [
+        msg for msg in event.messages
+        if (msg.photo or msg.video) and not is_gif(msg) and not is_sticker(msg)
+    ]
 
     if not media_messages:
         return
@@ -84,15 +96,18 @@ async def message_handler(event):
         # This message is part of an album; it will be handled by album_handler
         return
 
-    # Only handle messages that are photos or videos, excluding GIFs
+    # Only handle messages that are photos or videos, excluding GIFs and stickers
     if not (event.message.photo or event.message.video):
         return
-    if is_gif(event.message):
+    if is_gif(event.message) or is_sticker(event.message):
         return
 
     await forward_message(event.message)
 
 async def forward_message(message):
+    if is_sticker(message):
+        return  # Do not process stickers
+
     try:
         translated_text = translator.translate(message.text, src='auto', dest='en').text if message.text else ""
     except Exception as e:
